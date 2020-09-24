@@ -1,69 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
 {% load static %}
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" type="text/css" href="{% static 'vendors\css\normalize.css' % }">
-            <link rel="stylesheet" type="text/css" href="{% static 'vendors\css\grid.css' %}">
-            <link rel="stylesheet" type="text/css" href="{% static 'resources\css\style.css' %}">
-            <link rel="stylesheet" type="text/css" href="{% static 'resources\css\queries.css">
-            <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendors\css\normalize.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendors\css\grid.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'resources\css\style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'resources\css\queries.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
 
             <title>Roland's Projects</title>
         </head>
         <body>
-            <header class="header-off-main">
+            <header  class="header-main">
             <nav>
                 <div class="row">
                   <a class="name-nav" href="{% url 'home' %}">Roland Casset</a>
                     <ul class="main-nav">
                         <li><a href="{% static 'Resume.pdf' %}">Resume</a></li>
                         <li><a href="https://www.linkedin.com/in/roland-casset-8834a21b3/">LinkedIn</a></li>
-                        <li><a class="active" href="{% url 'allprojects' %}">Personal Projects</a></li>
+                        <li><a class="active" href="#">Personal Projects</a></li>
                     </ul>
                 </div>
             </nav>
+            <div class="hero-text-box">
+              <br />
+              <br />
+              <br />
+                <h1>Welcome to Personal Projects</h1>
+            </div>
+
 
             </header>
 
+<div class="container">
   <br />
-    <h2>Latest Projects</h2>
+  <h2>Latest Projects</h2>
+  <br />
 
-    <div class="album py-5 bg-light">
-        <div class="container-jobs">
-            <div class="row-jobs">
-               {% for project in projects.all %}
-                <div class="col-md-4">
-                  <div class="job-photo">
-                    <div class="card mb-4 shadow-sm">
-                        <img class="card-img-top" src="{{project.image.url}}"/>
-                        <div class="card-body">
-                            <p class="card-title">{{project.title}}</p>
-                            <p class="card-text">{{project.summary}}</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-               {% endfor %}
-            </div>
-        </div>
+  {% for project in projects.all %}
+    <div class="container-projects">
+    <div class="projects-anim">
+  <a class="projects-titles" href="{% url 'detail' project.id %}"><h3>{{project.title}}</h3></a>
+  <img class="projects-imgs" src="{{project.image.url}}"/>
+  <br />
     </div>
-
-
-
-
-    <div class="album py-5 bg-light">
-    {% for project in projects.all %}
-      <a href="{% url 'detail' project.id %}">
-        <h2>{{project.title}}</h2></a>
-      <br />
-      <img class="img-fluid" src="{{project.images.url}}" height="200" width="150">
-      <br />
-      <p>{{project.summary}}</p>
-    {% endfor %}
-  </div>
-
+  <p>{{ project.summary }}</p>
+    </div>
+    <br />
+  {% endfor %}
+</div>
 
 <footer>
   <div class="row">
@@ -84,7 +72,9 @@
     </div>
   </div>
   <div class="row">
-    <p> &copy; CopyRight Roland Casset {% now "Y" %}</p>
+    <p >
+      Copyright &copy; 2020 by Roland Casset. All rights reserved.
+    </p>
   </div>
 </footer>
 <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>

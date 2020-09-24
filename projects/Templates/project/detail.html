@@ -1,17 +1,16 @@
 <!doctype html>
-<html lang="en">
 {% load static %}
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" type="text/css" href="{% static 'vendors\css\normalize.css' % }">
+            <link rel="stylesheet" type="text/css" href="{% static 'vendors\css\normalize.css' %}">
             <link rel="stylesheet" type="text/css" href="{% static 'vendors\css\grid.css' %}">
             <link rel="stylesheet" type="text/css" href="{% static 'resources\css\style.css' %}">
-            <link rel="stylesheet" type="text/css" href="{% static 'resources\css\queries.css">
+            <link rel="stylesheet" type="text/css" href="{% static 'resources\css\queries.css' %}">
             <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
 
-            <title>{{project.title}}</title>
-        </head>
+            <title>{{projects.title}}</title>
+          </head>
         <body>
             <header class="header-off-main">
             <nav>
@@ -27,17 +26,19 @@
 
             </header>
 
-      <main role="main">
-        <div class="container">
+            <div class="container">
+              <br />
+              <div class="container-projects">
+              <h2>{{ projects.title }}</h2>
+              <br />
+              <img class="img-fluid" style="text-align: center;" src="{{projects.image.url}}"/>
+              <br />
+              <p>{{ projects.body }}</p>
+                <br />
+              </div>
 
-          <h2>{{ project.title}}</h2>
-          <img class="img-fluid" src="{{ project.image.url}}" height="450" width="450"/>
-          <br />
-          <p>{{ project.body }}</p>
-        </div>
 
-      </main>
-
+            </div>
 <footer>
   <div class="row">
     <div class="col span-1-of-2">

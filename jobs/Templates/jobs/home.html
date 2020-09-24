@@ -14,7 +14,7 @@
         <title>Roland Casset</title>
     </head>
     <body>
-        <header>
+        <header class="header-main">
         <nav>
             <div class="row">
               <a class=" active name-nav" href="{% url 'home' %}">Roland Casset</a>
@@ -48,7 +48,7 @@
                       <div class="col-md-4">
                         <div class="job-photo">
                           <div class="card mb-4 shadow-sm">
-                              <img class="card-img-top" src="{{job.image.url}}"/>
+                              <img class="card-img-top img-size" src="{{job.image.url}}"/>
                               <div class="card-body">
                                   <p class="card-title">{{job.title}}</p>
                                   <p class="card-text">{{job.summary}}</p>
@@ -75,7 +75,7 @@
                       <div class="col-md-4">
                         <div class="job-photo">
                           <div class="card mb-4 shadow-sm">
-                              <img class="card-img-top" src="{{completedjob.image.url}}"/>
+                              <img class="card-img-top img-size" src="{{completedjob.image.url}}"/>
                               <div class="card-body">
                                   <p class="card-title">{{completedjob.title}}</p>
                                   <p class="card-text">{{completedjob.summary}}</p>
@@ -110,7 +110,7 @@
           </div>
           <div class="row">
             <p >
-              Copyright &copy; 2020 by Roland Casset. All rights reserved.
+               &copy; CopyRight Roland Casset {% now "Y" %}
             </p>
           </div>
         </footer>
