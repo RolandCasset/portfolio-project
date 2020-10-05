@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'jobs.apps.JobsConfig',
     'completedjobs.apps.CompletedjobsConfig',
     'projects.apps.ProjectsConfig',
+    'imgsources.apps.ImgsourcesConfig',
+    'smallprojects.apps.SmallprojectsConfig',
+    'clear_cache',
 ]
 
 MIDDLEWARE = [

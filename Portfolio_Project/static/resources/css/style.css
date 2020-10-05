@@ -33,12 +33,12 @@ html {
 /* ----------------------------------------------------------------------------- */
 
 .row {
-  max-width: 1140px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 section {
-  padding: 80px 0;
+  padding: 80px 25px 0px 25px;
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -80,10 +80,6 @@ h3 {
   font-weight: bold;
 }
 
-.box {
-  padding: 1%;
-}
-
 /* ----------------------------------------------------------------------------- */
 /* PROJECTS */
 /* ----------------------------------------------------------------------------- */
@@ -117,7 +113,11 @@ h3 {
 }
 
 .projects-imgs {
-    width: 570px; !important
+    width: 50%; !important
+}
+
+.imgsource-imgs {
+    width: 25%; !important
 }
 
 
@@ -125,20 +125,32 @@ h3 {
 /* PARAGRAPHS */
 /* ----------------------------------------------------------------------------- */
 
+.long-copy-box {
+  text-align: center;
+  font-size: 115%;
+  line-height: 145%;
+  width: 80%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .long-copy {
   line-height: 145%;
-  width: 70%;
-  margin-left: 15%;
+  width: 80%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.long-copy-projects {
+  line-height: 145%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 5%;
 }
 
 .hero-text-box p {
     line-height: 145%;
     color: #a8a8a8;
-}
-
-.box p {
-  font-size: 90%;
-  line-height: 145%;
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -169,7 +181,7 @@ input[type=submit] {
   background-color: #1B9AAA;
   border: 1px solid #1B9AAA;
   color: #fff;
-  margin-right: 15px;
+  margin-right: 100px;
 }
 
 .btn-ghost:link,
@@ -212,18 +224,18 @@ input[type=submit]:active {
 
 .header-off-main {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/header.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/header.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/header1.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 10vh;
+  height: 8vh;
 
 }
 
 .hero-text-box {
     position: absolute;
     width: 1140px;
-    top: 25%;
+    top: 20%;
     left: 50%;
     -webkit-transform:translate(-50%, 50%);
             transform:translate(-50%, 50%);
@@ -234,26 +246,17 @@ input[type=submit]:active {
 /* MAIN NAVIGATION */
 /* ----------------------------------------------------------------------------- */
 
-.row a:hover,
-.row a.active {
-  color: #1B9AAA;
-  border-bottom: 2px solid #1B9AAA;
-  cursor: pointer;
-}
-
 .name-nav {
+  position: relative;
   float: left;
+  list-style: none;
   margin-top: 25px;
-  color: white;
-  text-transform: uppercase;
-  text-align: left;
-  text-decoration: none; !important
 }
 
-.name-nav a:link,
-.name-nav a:visited {
-  padding: 5px 0;
-  color: white;
+.name-nav li a:link,
+.name-nav li a:visited {
+  color: #555;
+  padding: 12px 0;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 90%;
@@ -262,31 +265,46 @@ input[type=submit]:active {
   transition: border-bottom 0.2s;
 }
 
-.name-nav a:hover,
-.name-nav a.active {
+.name-nav li a:hover,
+.name-nav li a.active {
   color: #1B9AAA;
   border-bottom: 2px solid #1B9AAA;
 }
 
-.main-nav {
+.topnav a.icon:link,
+.topnav a.icon:visited {
+  color: #555;
+  padding: 5px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.topnav a.icon:hover,
+.topnav a.icon.active {
+  color: #1B9AAA;
+  border-bottom: 2px solid #1B9AAA;
+}
+
+.mobile-nav {
+  position: relative;
   float: right;
   list-style: none;
   margin-top: 25px;
 }
 
-.main-nav li {
-  display: inline-block;
+.mobile-nav li {
+  display: block;
   margin-left: 40px;
 }
 
-.main-nav .heading {
-    text-align: left;
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
+.mobile-nav li a:link,
+.mobile-nav li a:visited {
+  color: #555;
   padding: 5px 0;
-  color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 90%;
@@ -295,8 +313,8 @@ input[type=submit]:active {
   transition: border-bottom 0.2s;
 }
 
-.main-nav li a:hover,
-.main-nav li a.active {
+.mobile-nav li a:hover,
+.mobile-nav li a.active {
   color: #1B9AAA;
   border-bottom: 2px solid #1B9AAA;
 }
@@ -304,32 +322,32 @@ input[type=submit]:active {
 /* ----------------------------------------------------------------------------- */
 /* STICKY NAVIGATION */
 /* ----------------------------------------------------------------------------- */
+
 .sticky {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.98);
-  -webkit-box-shadow: 0 2px 2px #efefef;
-  box-shadow: 0 2px 2px #efefef;
   z-index: 9999;
+  font-weight: bold;
 }
 .sticky .main-nav {
   margin-top: 18px;
 }
 
-.sticky .main-nav li a:link,
-.sticky .main-nav li a:visited {
-  padding: 16px 0;
+.sticky .main-nav li a {
   color: #555;
 }
 
-.sticky .logo {
-  display: none;
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  padding: 16px 0;
 }
 
-.sticky .logo-black {
-  display: block;
+.sticky .main-nav li a:hover,
+.sitcky .main-nav li a.active {
+  color: #1B9AAA;
+  border-bottom: 2px solid #1B9AAA;
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -337,6 +355,16 @@ input[type=submit]:active {
 /* ----------------------------------------------------------------------------- */
 
 footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 25px;
+
+}
+
+.footer-detail {
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -446,12 +474,6 @@ footer p {
   margin-left: -15px;
 }
 
-.col-md-4 {
-  -ms-flex: 0 0 33.333333%;
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
-}
-
 .card {
   position: relative;
   display: -ms-flexbox;
@@ -482,6 +504,11 @@ footer p {
   width: 100%;
 }
 
+.col-md-4 {
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
 .card-img,
 .card-img-top {
   border-top-left-radius: calc(0.25rem - 1px);

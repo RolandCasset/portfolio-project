@@ -12,19 +12,19 @@
       <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-            <title>Roland's Projects</title>
+            <title>Image Sources</title>
         </head>
         <body>
             <header  class="header-main">
               <nav class="sticky">
                   <div class="row">
                     <ul class="name-nav">
-                    <li><a href="{% url 'home' %}">Roland Casset</a></li>
+                      <li><a href="{% url 'home' %}">Roland Casset</a></li>
                     </ul>
                       <ul class="main-nav">
                           <li><a href="{% static 'Resume.pdf' %}">Resume</a></li>
                           <li><a href="https://www.linkedin.com/in/roland-casset-8834a21b3/">LinkedIn</a></li>
-                          <li><a class="active" href="{% url 'allprojects' %}">Personal Projects</a></li>
+                          <li><a href="{% url 'allprojects' %}">Personal Projects</a></li>
                       </ul>
                       <div class="topnav" id="myTopnav">
                         <ul class="mobile-nav">
@@ -43,11 +43,8 @@
               <br />
               <br />
               <br />
-                <h1>Welcome to Personal Projects</h1>
-                <p class="long-copy-box">This section has projects big and small that
-                  i am currently working on or have completed.
-                  The main focus for this section is to showcase my personal projects, while gaining a better
-                  understanding of the courses i have completed by doing my own thing.</p>
+                <h1>Welcome to Image Sources</h1>
+                <h3 style="text-transform: none;">This section details the numerous websites i used for images on my website</h3>
             </div>
 
 
@@ -55,38 +52,17 @@
 <section>
 <div class="container">
   <br />
-  <h2>Latest Projects</h2>
+  <h2>Image Sources</h2>
   <br />
 
   <div class="py-5 bg-light">
-  {% for project in projects.all %}
+  {% for imgsource in imgsources.all %}
     <div class="container-projects">
-    <div class="projects-anim">
-  <a class="projects-titles" href="{% url 'detail' project.id %}"><h3>{{project.title}}</h3></a>
-  <img class="projects-imgs" src="{{project.image.url}}"/>
+    <div class="projects-anim js--wp-1">
+      <img class="imgsource-imgs" src="{{imgsource.image.url}}"/>
   <br />
     </div>
-  <p class="long-copy-projects" >{{ project.summary }}</p>
-    </div>
-    <br />
-  {% endfor %}
-</div>
-</div>
-
-<div class="container">
-  <br />
-  <h2>Latest Small Projects</h2>
-  <br />
-
-  <div class="py-5 bg-light">
-  {% for smallproject in smallprojects.all %}
-    <div class="container-projects">
-    <div class="projects-anim">
-  <a class="projects-titles"><h3>{{smallproject.title}}</h3></a>
-  <img class="projects-imgs" src="{{smallproject.image.url}}"/>
-  <br />
-    </div>
-  <p class="long-copy-projects" >{{ smallproject.body }}</p>
+  <p class="long-copy-projects" >{{ imgsource.body }}</p>
     </div>
     <br />
   {% endfor %}
@@ -101,9 +77,8 @@
         <li><a href="{% url 'home' %}" >Home</a></li>
         <li><a href="{% static 'Resume.pdf' %}" >Resume</a></li>
         <li><a href="https://www.linkedin.com/in/roland-casset-8834a21b3/">LinkedIn</a></li>
-        <li><a href="{% url 'allprojects' %}" class="active">Personal Projects</a></li>
-        <li><a href="{% url 'imgSources' %}">Image Sources</a><li>
-
+        <li><a href="{% url 'allprojects' %}">Personal Projects</a></li>
+        <li><a href="{% url 'imgSources' %}" class="active">Image Sources</a><li>
       </ul>
     </div>
     <div class="col span-1-of-2">
