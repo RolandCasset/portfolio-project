@@ -341,6 +341,13 @@
     max-width: 100%;
   }
 
+  .main-nav a.icon {
+    padding-top: 15px;
+    float: right;
+    display: block;
+    color: #555;
+  }
+
   .container-projects {
     text-align: center;
     padding-left: 35px;
