@@ -398,6 +398,11 @@
     font-size: 14px;
   }
 
+  .row,
+  .hero-text-box {
+    padding: 0;
+  }
+
 }
 
 @media only screen and (max-width: 360px) {
@@ -444,6 +449,11 @@
 
   .projects-imgs {
       width: 400px; !important
+  }
+
+  .row,
+  .hero-text-box {
+    padding: 0;
   }
 
 }
