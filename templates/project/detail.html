@@ -18,22 +18,23 @@
                   <div class="row">
                     <ul class="name-nav">
                     <li><a href="{% url 'home' %}">Roland Casset</a></li>
-                    </ul>
-                    <ul class="main-nav">
+                  </ul>
+                      <ul class="main-nav">
                           <li><a href="{% static 'Resume.pdf' %}">Resume</a></li>
                           <li><a href="https://www.linkedin.com/in/roland-casset-8834a21b3/">LinkedIn</a></li>
                           <li><a href="{% url 'allprojects' %}">Personal Projects</a></li>
+                          <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"></li>
+                            <i class="fa fa-bars"></i>
+                          </a></li>
                       </ul>
+                    </div>
+
                       <div class="topnav" id="myTopnav">
                         <ul class="mobile-nav">
                             <li><a href="{% static 'Resume.pdf' %}">Resume</a></li>
                             <li><a href="https://www.linkedin.com/in/roland-casset-8834a21b3/">LinkedIn</a></li>
                             <li><a href="{% url 'allprojects' %}">Personal Projects</a></li>
-                            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"></li>
-                              <i class="fa fa-bars"></i>
-                            </a></li>
                       </ul>
-                    </div>
                     </div>
 
               </nav>

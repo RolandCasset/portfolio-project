@@ -1,6 +1,6 @@
 @media only screen and (max-width: 3000px) {
 
-  .topnav .icon {
+  .main-nav .icon {
     display: none;
   }
   .col-md-4 {
@@ -270,6 +270,13 @@
     display: none;
   }
 
+  .main-nav a.icon {
+    padding-top: 15px;
+    float: right;
+    display: block;
+    color: #555;
+  }
+
   .topnav a.icon {
     float: right;
     display: block;
@@ -315,11 +322,11 @@
 
   .header-off-main {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/header.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/header1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/header.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    height: 10vh;
+    height: 15vh;
 
   }
 
