@@ -3,6 +3,7 @@
   .main-nav .icon {
     display: none;
   }
+
   .col-md-4 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
@@ -61,9 +62,10 @@
 
 @media only screen and (max-width: 2000px) {
 
-  .topnav .icon {
+  .main-nav .icon {
     display: none;
   }
+
   .col-md-4 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
@@ -116,9 +118,10 @@
 
 @media only screen and (max-width: 1200px) {
 
-  .topnav .icon {
+  .main-nav .icon {
     display: none;
   }
+
   .col-md-4 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
@@ -176,7 +179,7 @@
 }
 
 @media only screen and (max-width: 1023px) {
-  .topnav .icon {
+  .main-nav .icon {
     display: none;
   }
 
