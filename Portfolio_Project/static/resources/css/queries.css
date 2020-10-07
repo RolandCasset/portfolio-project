@@ -207,6 +207,10 @@
     margin-left: 10%;
   }
 
+  .long-copy-projects {
+    width: 80%;
+  }
+
   .main-nav {
     position: relative;
     float: right;
@@ -319,6 +323,11 @@
     margin-left: 0%;
   }
 
+  .long-copy-projects {
+    width: 100%;
+    margin-left: 0%;
+  }
+
   section {
     padding: 25px 0;
   }
@@ -383,9 +392,15 @@
       width: 400px; !important
   }
 
+  .long-copy-projects {
+    width: 100%;
+    margin-left: 0%;
+    font-size: 14px;
+  }
+
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 360px) {
   .col-md-4 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
